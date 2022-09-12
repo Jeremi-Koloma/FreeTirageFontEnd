@@ -1,0 +1,22 @@
+.btnActive{
+    background-color: #ffffff;
+    color: black;
+    border: 0;
+}
+.btnActive:hover{
+    background-color: #F57F59;
+    color: #ffffff;
+    border: 0;
+}
+.otherBtn{
+    color: #ffffff;
+    border: 0;
+}
+.otherBtn:hover{
+    background-color: #F57F59;
+    border: 0;
+}
+.logo{
+    width: 100;
+    height: 40px;
+}

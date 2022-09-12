@@ -1,0 +1,14 @@
+.btnImport{
+    background-color: #F57F59;
+    color: #ffffff;
+    border: 0;
+}
+.btnImport:hover{
+    background-color: black;
+}
+
+.btnListEnregister{
+    background-color: #F57F59;
+    color: #fff;
+    border: 0;
+}
