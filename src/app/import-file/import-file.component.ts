@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./import-file.component.css']
 })
 export class ImportFileComponent implements OnInit {
-
+  
   constructor() { }
 
+ 
+
   ngOnInit(): void {
+    
   }
 
 }
