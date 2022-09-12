@@ -9,49 +9,25 @@
 
     <thead class="table-dark">
         <tr>
+            <th>N°</th>
             <th>Nom</th>
             <th>Prénom</th>
             <th>Email</th>
             <th>Numéro</th>
-            <th>Liste</th>
             <th>Tirage</th>
         </tr>
     </thead>
 
-    <tr>
-        <td>KOLOMA</td>
-        <td>Jeremi</td>
-        <td>kolomajeremi60@gmail.com</td>
-        <td>73 23 06 09</td>
-        <td>Liste 1</td>
-        <td>Tirage 1</td>
+    <tr *ngFor="let tire of tirage">
+        <td>{{tire.idShortList}}</td>
+        <td>{{tire.nom}}</td>
+        <td>{{tire.prenom}}</td>
+        <td>{{tire.email}}</td>
+        <td>{{tire.numero}}</td>
+        <td>{{tire.idTirage}}</td>
+        
+        
     </tr>
 
-    <tr>
-        <td>KOLOMA</td>
-        <td>Jeremi</td>
-        <td>kolomajeremi60@gmail.com</td>
-        <td>73 23 06 09</td>
-        <td>Liste 1</td>
-        <td>Tirage 1</td>
-    </tr>
-
-    <tr>
-        <td>KOLOMA</td>
-        <td>Jeremi</td>
-        <td>kolomajeremi60@gmail.com</td>
-        <td>73 23 06 09</td>
-        <td>Liste 1</td>
-        <td>Tirage 1</td>
-    </tr>
-
-    <tr>
-        <td>KOLOMA</td>
-        <td>Jeremi</td>
-        <td>kolomajeremi60@gmail.com</td>
-        <td>73 23 06 09</td>
-        <td>Liste 1</td>
-        <td>Tirage 1</td>
-    </tr>
 
 </table>

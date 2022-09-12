@@ -1,41 +1,46 @@
 
  <!-- Colonne Droite faire Tirage -->
-
- <fieldset class="ms-3">
+ <form action="" class="form">
     
-    <legend>Faire Tirage</legend>
-    <hr>
-
-    <div class="container-fluid ms-3 overflow-hidden">
-
-        <div class="row">
+    <fieldset class="ms-3">
     
-            <div class="form-floating mb-3">
-                <input type="text" name="nameTirage" id="nameTirage" class="form form-control" placeholder="Nom du Tirage">
-                <label for="nameTirage">Nom du Tirage</label>
+        <legend class="display-4">Faire Tirage</legend>
+        <hr class="mb-3">
+    
+        <div class="container-fluid ms-3 overflow-hidden">
+    
+            <div class="row">
+        
+                <div class="form-floating mb-3 col-12 col-md-6">
+                    <input type="text" name="nameTirage" id="nameTirage" class="form form-control" placeholder="Nom du Tirage">
+                    <label for="nameTirage">Nom du Tirage</label>
+                </div>
+        
+                <div class="mb-3 form-floating col-12 col-md-6">
+                    <select name="selectListe" id="selectListe" class="form-select">
+                        <option selected>--- Séclectionnez une liste ---</option>
+                        <option value="List1">Liste 1</option>
+                        <option value="List2">Liste 2</option>
+                        <option value="List3">Liste 3</option>
+                    </select>
+                    <label for="selectListe">Choisir une liste</label>
+                </div>
+        
+                <div class="form-floating mb-3 col-12 col-md-6">
+                    <input type="text" name="numberTirage" id="numberTirage" class="form form-control" placeholder="Combiens de Personnes ?">
+                    <label for="numberTirage">Combiens de Personnes ?</label>
+                </div>
+        
+                <button type="submit" routerLink="/detail-tirage" class=" btnImport btn mb-5 col-12 col-md- btn-dark">Faire Tirage</button>
+                
             </div>
+          
+          </div>
+        
+          <!-- FIN  Colonne Droite Faire Tirage -->
     
-            <div class="mb-3 form-floating">
-                <select name="selectListe" id="selectListe" class="form-select">
-                    <option selected>--- Séclectionnez une liste ---</option>
-                    <option value="List1">Liste 1</option>
-                    <option value="List2">Liste 2</option>
-                    <option value="List3">Liste 3</option>
-                </select>
-                <label for="selectListe">Choisir une liste</label>
-            </div>
+     </fieldset>
     
-            <div class="form-floating mb-3">
-                <input type="text" name="numberTirage" id="numberTirage" class="form form-control" placeholder="Combiens de Personnes ?">
-                <label for="numberTirage">Combiens de Personnes ?</label>
-            </div>
-    
-            <button type="submit" routerLink="/detail-tirage" class=" btnImport btn mb-5">Faire Tirage</button>
-            
-        </div>
-      
-      </div>
-    
-      <!-- FIN  Colonne Droite Faire Tirage -->
+ </form>
 
- </fieldset>
+ 

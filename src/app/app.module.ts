@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TirageComponent } from './tirage/tirage.component';
 import { DoTirageComponent } from './do-tirage/do-tirage.component';
 import { DetailsTirageComponent } from './details-tirage/details-tirage.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DetailsTirageComponent } from './details-tirage/details-tirage.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
