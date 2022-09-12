@@ -1,28 +1,37 @@
-<div class="row overflow-hidden">
+<div class="row overflow-hidden me-0">
+
     <!-- MENU -->
     <div class="row col-12 col-md-3 vh-100 me-3 overflow-hidden" style="background-color: #273444;">
       <div class="container-fluid overflow-hidden">
         <app-menu></app-menu>
       </div>
-  </div>
+    </div>
   <!-- END MENU-->
 
-  <!-- Colonne Droite -->
+
+  <!-- Colonne Droite Page Import Fichier-->
   <div class="row col-12 col-md-9 overflow-hidden">
-    <div class="container-fluid ms-3 overflow-hidden">
-      <app-contenu></app-contenu>
-      <!-- Import file -->
-      <div class="row overflow-hidden">
-        <div class="row col-12 col-md-5">
-          <app-import-file></app-import-file>
-        </div>
-        <!-- Card img -->
-        <div class="row col-12 col-md-7 overflow-hidden">
-          <app-card-item></app-card-item>
-        </div>
-      </div>
-    
-    </div>
+    <app-tirage></app-tirage>
   </div>
-<!-- END Colonne Droite -->
+  <!-- FIN Page Import Fichier-->
+
+
+  <!-- Colonne Droite Page Faire Tirage-->
+  <app-do-tirage></app-do-tirage>
+  <!-- FIN Page Faire Tirage-->
+
+
+
+  <!-- Colonne Droite Page Détails Tirage-->
+  <app-details-tirage></app-details-tirage>
+   <!-- FIN Page Détails Tirage-->
+
+
+
+
+
+
+  <app-footer></app-footer>
+  <!-- END Colonne Droite -->
+
 </div>
