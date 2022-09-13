@@ -1,16 +1,26 @@
-<form>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <fieldset class="ms-3">
         <legend>Veillez Importer un fichier</legend>
         <hr>
         <div class="form-floating mb-3">
-            <input type="file" name="file" id="file" class="form form-control" placeholder="importer un fichier">
-            <label for="file">Importer un fichier</label>
+            <input formControlName="addFile"  [ngClass]="{'is-invalid':submitted && registerForm.controls['addFile'].errors}" type="file"  name="addFile" id="addFile" class="form form-control">
+            <label for="addFile">Importer un fichier</label>
+            <div *ngIf="submitted && registerForm.controls['addFile'].errors" class="text-danger">
+                <div *ngIf="submitted && registerForm.controls['addFile'].errors['required']">
+                    Fichier : veillez joindre un fichier !
+                </div>
+            </div>
         </div>
         
         <div class="form-floating mb-3">
-            <input type="text" name="nameListe" id="nameListe" class="form form-control" placeholder="Nom liste">
+            <input formControlName="nameListe"  [ngClass]="{'is-invalid':submitted && registerForm.controls['nameListe'].errors}" type="text"  name="nameListe" id="nameListe" class="form form-control">
             <label for="nameListe">Nom de la liste</label>
+            <div *ngIf="submitted && registerForm.controls['nameListe'].errors" class="text-danger">
+                <div *ngIf="submitted && registerForm.controls['nameListe'].errors['required']">
+                    Liste : veillez renseigneer le champs !
+                </div>
+            </div>
         </div>
-        <button type="submit" routerLink="/do-tirage" class=" btnImport btn mb-5">Valider</button>
+        <button type="submit" class=" btnImport btn mb-5">Valider</button> <!-- routerLink="/do-tirage" -->
     </fieldset>
 </form>
