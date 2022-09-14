@@ -3,7 +3,7 @@
         <legend>Veillez Importer un fichier</legend>
         <hr>
         <div class="form-floating mb-3">
-            <input formControlName="addFile"  [ngClass]="{'is-invalid':submitted && registerForm.controls['addFile'].errors}" type="file"  name="addFile" id="addFile" class="form form-control">
+            <input (change)="selectFile($event)" formControlName="addFile"  [ngClass]="{'is-invalid':submitted && registerForm.controls['addFile'].errors}" type="file"  name="addFile" id="addFile" class="form form-control">
             <label for="addFile">Importer un fichier</label>
             <div *ngIf="submitted && registerForm.controls['addFile'].errors" class="text-danger">
                 <div *ngIf="submitted && registerForm.controls['addFile'].errors['required']">
@@ -21,6 +21,7 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class=" btnImport btn mb-5">Valider</button> <!-- routerLink="/do-tirage" -->
+        <button (click)="uploadFile()" type="submit" class=" btnImport btn mb-5">Valider</button> <!-- routerLink="/do-tirage" -->
     </fieldset>
 </form>
+

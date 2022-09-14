@@ -1,3 +1,4 @@
+import {HttpClient} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,13 +12,15 @@ export class ImportFileComponent implements OnInit {
 
   registerForm !: FormGroup; 
   submitted = false;
+
+  fileUploadUrl ="http://localhost:8080/postulant/listePostulant/liste 1"
   
-  constructor(private formBuilder:FormBuilder, private route: Router){ }
+  constructor(private _http:HttpClient, private formBuilder:FormBuilder, private route: Router){ }
  
 
   ngOnInit(): void {
     
-     // Validation;
+     // ---------------------- Si les Champs sont vides --------- //
      this.registerForm = this.formBuilder.group({
       nameListe:['',Validators.required],
       addFile:['',Validators.required]
@@ -30,8 +33,37 @@ export class ImportFileComponent implements OnInit {
     if(this.registerForm.invalid){
       return 
     }
-    alert("Success");
+    
+    alert("Importer avec Succès !");
     this.route.navigateByUrl("/do-tirage");
   }
 
+
+  // --------------------------- Importation Fichier Excel --------------------//
+
+  file:any; 
+
+  selectFile(event:any){ // Selectionner le fichier;
+    this.file=event.target.files[0];
+  }
+
+  uploadFile(){ // import fichier;
+    let formData= new FormData();
+    formData.append("file",this.file);
+
+    this._http.post(this.fileUploadUrl, formData ).subscribe(
+      (data:any)=>{
+        // success
+        console.log(data); 
+        alert(data.message );
+      },
+      (error)=>{
+        // errors;
+        console.log(error);
+      }
+    );
+  }
+   // ----------------------  FIN Importation Fichier Excels --------- //
+
+ 
 }
