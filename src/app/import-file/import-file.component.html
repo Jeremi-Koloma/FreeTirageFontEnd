@@ -13,7 +13,7 @@
         </div>
         
         <div class="form-floating mb-3">
-            <input formControlName="nameListe"  [ngClass]="{'is-invalid':submitted && registerForm.controls['nameListe'].errors}" type="text"  name="nameListe" id="nameListe" class="form form-control">
+            <input formControlName="nameListe"  [ngClass]="{'is-invalid':submitted && registerForm.controls['nameListe'].errors}" type="text" [(ngModel)]="libelle"  name="nameListe" id="nameListe" class="form form-control">
             <label for="nameListe">Nom de la liste</label>
             <div *ngIf="submitted && registerForm.controls['nameListe'].errors" class="text-danger">
                 <div *ngIf="submitted && registerForm.controls['nameListe'].errors['required']">

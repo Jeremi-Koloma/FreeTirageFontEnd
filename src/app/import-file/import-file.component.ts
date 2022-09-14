@@ -12,8 +12,9 @@ export class ImportFileComponent implements OnInit {
 
   registerForm !: FormGroup; 
   submitted = false;
+  libelle!: string
 
-  fileUploadUrl ="http://localhost:8080/postulant/listePostulant/liste 1"
+  
   
   constructor(private _http:HttpClient, private formBuilder:FormBuilder, private route: Router){ }
  
@@ -26,6 +27,7 @@ export class ImportFileComponent implements OnInit {
       addFile:['',Validators.required]
     })
   }
+
 
   onSubmit(){
     this.submitted = true;
@@ -40,7 +42,7 @@ export class ImportFileComponent implements OnInit {
 
 
   // --------------------------- Importation Fichier Excel --------------------//
-
+  
   file:any; 
 
   selectFile(event:any){ // Selectionner le fichier;
@@ -48,10 +50,12 @@ export class ImportFileComponent implements OnInit {
   }
 
   uploadFile(){ // import fichier;
+    let fileUploadUrl =`http://localhost:8080/postulant/listePostulant/${this.libelle}`;
+    
     let formData= new FormData();
     formData.append("file",this.file);
 
-    this._http.post(this.fileUploadUrl, formData ).subscribe(
+    this._http.post(fileUploadUrl, formData ).subscribe(
       (data:any)=>{
         // success
         console.log(data); 
