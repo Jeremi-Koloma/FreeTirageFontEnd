@@ -10,7 +10,7 @@ import { CardItemComponent } from './card-item/card-item.component';
 import { FooterComponent } from './footer/footer.component';
 import { TirageComponent } from './tirage/tirage.component';
 import { DoTirageComponent } from './do-tirage/do-tirage.component';
-import {ReactiveFormsModule} from '@angular/forms'
+import {FormsModule, NgModel, ReactiveFormsModule} from '@angular/forms'
 import { DetailsTirageComponent } from './details-tirage/details-tirage.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -30,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

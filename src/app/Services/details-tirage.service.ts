@@ -10,6 +10,6 @@ export class DetailsTirageService {
   constructor(private http:HttpClient) { }
   
   getShortList(): Observable<object>{
-    return this.http.get('http://localhost:8080/shortList/read' )
+    return this.http.get('http://localhost:8080/shortList/read')
   }
 }

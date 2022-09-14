@@ -11,32 +11,33 @@
                 <h1 class="font-weight-bold py-3 display-4">Faire Tirage !</h1>
                 <form>
                     <div class="form-row form-floating mb-3">
-                        <input type="text" name="nameTirage" id="nameTirage" class="form form-control" placeholder="Nom du Tirage">
+                        <input type="text" name="nameTirage" [(ngModel)]="lib" id="nameTirage" class="form form-control" placeholder="Nom du Tirage">
                         <label for="nameTirage">Nom Tirage</label>
                     </div>
 
                     <div class="form-row form-floating mb-3">
-                        <select name="selectListe" id="selectListe" class="form-select me-3">
+                        <!-- <select name="selectListe" id="selectListe" class="form-select me-3">
                             <option selected> --- Séclectionnez une liste ---</option>
                             <option value="List1">Liste 1</option>
                             <option value="List2">Liste 2</option>
                             <option value="List3">Liste 3</option>
-                        </select>
+                        </select> -->
+                        <input type="text" name="selectListe" [(ngModel)]="liblist" id="selectListe" class="form form-control" placeholder="Choisir une liste">
                         <label for="selectListe">Choisir une liste</label>
                     </div>
 
                     <div class="form-row form-floating mb-3">
-                        <input type="number" name="numberTirage" id="numberTirage" class="form form-control" placeholder="Nombre de Personnes ?">
-                        <label for="numberTirage">Nombre de Personnes ?</label>
+                        <input type="number" name="numberTirage" [(ngModel)]="nbrlist" id="numberTirage" class="form form-control" placeholder="Nombre de Personnes ?">
+                        <label for="numberTirage">Nombre de Personnes</label>
                     </div>
 
                     <div class="form-row form-floating mb-3">
-                        <input type="date" name="date" id="date" class="form form-control" placeholder="date">
+                        <input type="date" name="numberTirage" [(ngModel)]="date" id="numberTirage" class="form form-control" placeholder="date">
                         <label for="numberTirage">Date Tirage</label>
                     </div>
 
                     <div class="form-row">
-                        <button type="button" class="btn1 mt-3 mb-4" routerLink="/detail-tirage">Faire Tirage </button>
+                        <button type="button" class="btn1 mt-3 mb-4" routerLink="/detail-tirage" (click)="onclickTirage()">Faire Tirage </button>
                     </div>
                     <p class="my-4">Merci de donner un Nom pour faire le tirage et préciser le nombre de personne à tirer</p>
                 </form>
