@@ -28,3 +28,23 @@
     font-size: 2rem;
     font-weight: bold;
 }
+
+.goTiragebtn{
+    background: #F57F59;
+    color: #ffffff;
+    width: 150px;
+}
+
+.goTiragebtn:hover{
+    background: black;
+    color: #ffffff;
+}
+
+.tirageSection{
+    background: #ffffff;
+    box-shadow: 4px 0px 4px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

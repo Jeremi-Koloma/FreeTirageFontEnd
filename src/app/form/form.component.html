@@ -1,0 +1,30 @@
+<p>form works!</p>
+
+<table class="tableau">
+    <thead>
+    <tr>
+        <th>titre 1</th>
+        <th>titre 2</th>
+        <th>titre 3</th>
+        <th>action</th>
+        
+
+    </tr>
+</thead>
+<tbody  *ngFor="let tirage of obs |async">
+    <tr>
+        <td>{{tirage.idTirage}}</td>
+        <td>{{tirage.date}}</td>
+        <td>{{tirage.libelle}}</td>
+        <td><button>Voir Plus</button></td>
+
+    </tr>
+  
+  
+  
+  
+    
+</tbody>
+</table>
+
+

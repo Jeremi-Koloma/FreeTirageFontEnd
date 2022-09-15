@@ -14,6 +14,7 @@ import {FormsModule, NgModel, ReactiveFormsModule} from '@angular/forms'
 import { DetailsTirageComponent } from './details-tirage/details-tirage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccueilComponent } from './accueil/accueil.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AccueilComponent } from './accueil/accueil.component';
     TirageComponent,
     DoTirageComponent,
     DetailsTirageComponent,
-    AccueilComponent
+    AccueilComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
