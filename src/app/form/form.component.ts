@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ServicetirService } from '../servicetir.service';
 import { tirage } from '../tirage';
@@ -17,7 +17,7 @@ export class FormComponent implements OnInit {
   lib!:String
   g!:tirage
   obs!:Observable<tirage[]>;
- constructor( public serv:ServicetirService,public routeur:ActivatedRoute) { }
+ constructor( public serv:ServicetirService,public routeur:ActivatedRoute,private route:Router) { }
 
  ngOnInit(): void {
    this.id=this.routeur.snapshot.params['id']

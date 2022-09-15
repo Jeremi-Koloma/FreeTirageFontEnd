@@ -5,6 +5,7 @@ import { DetailsTirageComponent } from './details-tirage/details-tirage.componen
 import {DoTirageComponent } from './do-tirage/do-tirage.component';
 import { FormComponent } from './form/form.component';
 import { ImportFileComponent } from './import-file/import-file.component';
+import { ShortlistComponent } from './shortlist/shortlist.component';
 import { TirageComponent } from './tirage/tirage.component';
 
 
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'tirage',component:TirageComponent},
   {path:'do-tirage', component:DoTirageComponent},
   {path:'detail-tirage', component:DetailsTirageComponent},
-  {path:'test/:id', component:FormComponent}
+  {path:'tirages/:id', component:FormComponent},
+  {path:'shortlist/:id', component:ShortlistComponent}
 
 ];
 

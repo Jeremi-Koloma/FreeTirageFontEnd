@@ -15,6 +15,7 @@ import { DetailsTirageComponent } from './details-tirage/details-tirage.componen
 import { HttpClientModule } from '@angular/common/http';
 import { AccueilComponent } from './accueil/accueil.component';
 import { FormComponent } from './form/form.component';
+import { ShortlistComponent } from './shortlist/shortlist.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormComponent } from './form/form.component';
     DoTirageComponent,
     DetailsTirageComponent,
     AccueilComponent,
-    FormComponent
+    FormComponent,
+    ShortlistComponent
   ],
   imports: [
     BrowserModule,

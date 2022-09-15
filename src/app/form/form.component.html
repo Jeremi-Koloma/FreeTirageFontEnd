@@ -16,15 +16,16 @@
         <td>{{tirage.idTirage}}</td>
         <td>{{tirage.date}}</td>
         <td>{{tirage.libelle}}</td>
-        <td><button>Voir Plus</button></td>
+        <td>
+        
+        <button [routerLink]="['/shortlist', tirage.idTirage]"> Voir Plus</button>
+            
+        </td>
 
     </tr>
-  
-  
-  
-  
     
 </tbody>
+
 </table>
 
 
