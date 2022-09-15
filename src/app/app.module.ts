@@ -13,6 +13,7 @@ import { DoTirageComponent } from './do-tirage/do-tirage.component';
 import {FormsModule, NgModel, ReactiveFormsModule} from '@angular/forms'
 import { DetailsTirageComponent } from './details-tirage/details-tirage.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AccueilComponent } from './accueil/accueil.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     TirageComponent,
     DoTirageComponent,
-    DetailsTirageComponent
+    DetailsTirageComponent,
+    AccueilComponent
   ],
   imports: [
     BrowserModule,

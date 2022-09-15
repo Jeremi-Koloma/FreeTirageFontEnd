@@ -1,0 +1,30 @@
+.colorOrange{
+    background-color: #F57F59;
+    color: #ffffff;
+}
+
+.cardHome{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #53034f 21.94%, #dd0f5e 59.98%);
+    opacity: 0.6;
+    border-radius: .8rem;
+}
+
+.cardHome2{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #eb9902 12.31%, #dd3700 45.69%);
+    opacity: 0.6;
+    border-radius: .8rem;
+}
+
+.cardHoneContent{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
