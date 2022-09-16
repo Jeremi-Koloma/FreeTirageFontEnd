@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Tirageclasse } from '../Classes/tirageclasse';
+import { postulant } from '../postulant';
 import { TirageserviceService } from '../Services/tirageservice.service';
+import { ServicetirService } from '../servicetir.service';
 
 @Component({
   selector: 'app-do-tirage',
@@ -13,16 +15,18 @@ export class DoTirageComponent implements OnInit {
  date!:Date
  lib!:String
  tir!:Tirageclasse
-
+ ob!:Observable<postulant[]>
+ nu!:postulant
 // path varible
  liblist!: String
  nbrlist!: number
  obs!:Observable<String>;
 
-  constructor(private serv:TirageserviceService) { }
+  constructor(private serv:TirageserviceService,public serve:ServicetirService) { }
 
   ngOnInit(): void {
-
+   this.ob=this.serve.tout()
+     
   }
   onclickTirage(){
     this.tir=new Tirageclasse(this.lib,this.date)
