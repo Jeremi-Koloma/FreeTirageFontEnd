@@ -13,14 +13,16 @@
                 <th>N °</th>
                 <th>Date</th>
                 <th>Tirage</th>
+                <th>Nombre Postulants</th>
                 <th>Détails</th>
             </tr>
             </thead>
-            <tbody  *ngFor="let tirage of obs |async">
+            <tbody  *ngFor="let tirage of obs |async ;  let i =index ">
                 <tr>
                     <td>{{tirage.idTirage}}</td>
                     <td>{{tirage.date}}</td>
                     <td>{{tirage.libelle}}</td>
+                    <td>{{NombrePost[i]}} Postulants</td>
                     <td>
                     <button class="btnVoirPlus" [routerLink]="['/shortlist', tirage.idTirage]"> Voir Plus</button>
                     </td>

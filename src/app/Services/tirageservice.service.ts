@@ -15,5 +15,8 @@ export class TirageserviceService {
     return this.http.post<String>(`http://localhost:8080/tirage/createTirage/${libelleliste}/${nombre}`,tir)
   }
 
+  getNombreP(): Observable<Object>{
+    return this.http.get(`http://localhost:8080/shortList/numberPost`)
+  }
 
 }
