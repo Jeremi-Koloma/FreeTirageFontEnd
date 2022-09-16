@@ -37,8 +37,8 @@ export class ServicetirService {
     touttirage():Observable<number>{
       return this.http.get<number>('http://localhost:8080/tirage/cont')  
     }
-    modif(id:number):Observable<short>{
-      return this.http.get<short>(`http://localhost:8080/shortList/create/${id}`);
+    modif(id:number):Observable<short[]>{
+      return this.http.get<short[]>(`http://localhost:8080/shortList/create/${id}`);
   }
 
 

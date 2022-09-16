@@ -12,13 +12,18 @@ import { short } from '../short';
 })
 export class ShortlistComponent implements OnInit {
   id!:number
-  os!:Observable<short>
+  os!:Observable<short[]>
 
   constructor(public routeur:ActivatedRoute,public serv:ServicetirService ) { }
 
   ngOnInit(): void {
     this.id=this.routeur.snapshot.params['id']
+      
     this.os=this.serv.modif(this.id)
+    
+    
   }
+ 
+
 
 }

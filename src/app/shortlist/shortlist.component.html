@@ -9,17 +9,12 @@
 </thead>
 
 <tbody>
-    <tr>
-        <!--td>{{short.idShortList}}</td>
+    <tr *ngFor="let short of os |async">
+        <td>{{short.idShortList}}</td>
         <td>{{short.nom}}</td>
         <td>{{short.prenom}}</td>
-        <td-->
-        <td>Moi</td>
-        <td>Moi</td>
-        <td>Moi</td>
+        <td><button> Voir Plus</button></td>
         
-        <button> Voir Plus</button>
-            
-
     </tr>
+    
 </tbody>
