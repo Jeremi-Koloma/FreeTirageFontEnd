@@ -19,12 +19,8 @@
                         <select name="selectListe" id="selectListe" class="form-select me-3" >
                             <option selected > --- Séclectionnez une liste ---</option>
                             <option *ngFor="let postulant of ob |async" >{{postulant.libelle}}</option>
-                            <!-- <option value="List2">Liste 2</option>
-                            <option value="List3">Liste 3</option> -->
                             <label for="selectListe">Choisir une liste</label>
                         </select>
-                        <!--input type="text" name="selectListe" [(ngModel)]="liblist" id="selectListe" class="form form-control" placeholder="Choisir une liste">
-                        <label for="selectListe">Choisir une liste</label-->
                     </div>
 
                     <div class="form-row form-floating mb-3">
