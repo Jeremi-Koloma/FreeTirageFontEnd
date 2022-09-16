@@ -1,31 +1,39 @@
-<p>form works!</p>
+<div class="container-fluid">
+    <div class="row col-12">
+        <div class="alert my-3 mb-3 colorOrange me-3 overflow-hidden">
+            <h1 class="text-center">Voici l'ensemble de Tirages effectués sur la Liste 1</h1>
+        </div>
+        <hr>
+    </div>
 
-<table class="tableau">
-    <thead>
-    <tr>
-        <th>titre 1</th>
-        <th>titre 2</th>
-        <th>titre 3</th>
-        <th>action</th>
-        
-
-    </tr>
-</thead>
-<tbody  *ngFor="let tirage of obs |async">
-    <tr>
-        <td>{{tirage.idTirage}}</td>
-        <td>{{tirage.date}}</td>
-        <td>{{tirage.libelle}}</td>
-        <td>
-        
-        <button [routerLink]="['/shortlist', tirage.idTirage]"> Voir Plus</button>
+    <div class="col-12 col-md-12">
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+            <tr>
+                <th>N °</th>
+                <th>Date</th>
+                <th>Tirage</th>
+                <th>Détails</th>
+            </tr>
+            </thead>
+            <tbody  *ngFor="let tirage of obs |async">
+                <tr>
+                    <td>{{tirage.idTirage}}</td>
+                    <td>{{tirage.date}}</td>
+                    <td>{{tirage.libelle}}</td>
+                    <td>
+                    <button class="btnVoirPlus" [routerLink]="['/shortlist', tirage.idTirage]"> Voir Plus</button>
+                    </td>
+                </tr>
             
-        </td>
-
-    </tr>
+            </tbody>
+        
+        </table>
     
-</tbody>
+    </div>
 
-</table>
+</div>
+
+
 
 

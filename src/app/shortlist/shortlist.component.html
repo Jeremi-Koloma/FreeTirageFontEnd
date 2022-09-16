@@ -1,20 +1,34 @@
-<p>shortlist works!</p>
-<table class="tableau">
-    <thead>
-    <tr>
-        <th>N°</th>
-        <th>Nom</th>
-        <th>Prénom</th>
-    </tr>
-</thead>
 
-<tbody>
-    <tr *ngFor="let short of os |async">
-        <td>{{short.idShortList}}</td>
-        <td>{{short.nom}}</td>
-        <td>{{short.prenom}}</td>
-        <td><button> Voir Plus</button></td>
+<div class="container-fluid">
+    <div class="row col-12">
+        <div class="alert my-3 mb-3 colorOrange me-3 overflow-hidden">
+            <h1 class="text-center">Les Postulants du Tirage 1</h1>
+        </div>
+        <hr>
+    </div>
+
+    <div class="col-12 col-md-12">
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+            <tr>
+                <th>N °</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Voir Plus</th>
+            </tr>
+            </thead>
+            <tbody  *ngFor="let short of os |async">
+                <tr>
+                    <td>{{short.idShortList}}</td>
+                    <td>{{short.nom}}</td>
+                    <td>{{short.prenom}}</td>
+                    <td><button> Voir Plus</button></td>
+                </tr>
+            
+            </tbody>
         
-    </tr>
+        </table>
     
-</tbody>
+    </div>
+
+</div>

@@ -58,4 +58,15 @@
     color: #ffffff;
     margin-top:-30px ;
     position: relative;
+    font-size: 1.2rem;
+}
+.btnVoirPlus{
+    background: #273444;
+    color: #ffffff;
+    width: 120px;
+    border: none;
+}
+
+.btnVoirPlus:hover{
+    background: #F57F59;
 }

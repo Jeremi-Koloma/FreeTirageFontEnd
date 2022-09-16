@@ -1,0 +1,15 @@
+.colorOrange{
+    background-color: #F57F59;
+    color: #ffffff;
+}
+
+.btnVoirPlus{
+    background: #273444;
+    color: #ffffff;
+    border: none;
+    width: 120px;
+    height: 35px;
+}
+.btnVoirPlus:hover{
+    background: #F57F59;
+}

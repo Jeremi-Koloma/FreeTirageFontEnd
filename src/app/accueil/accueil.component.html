@@ -40,7 +40,7 @@
                             <tr>
                                 <th>Liste</th>
                                 <th>Nombre Tirage</th>
-                                <th>Action</th>
+                                <th>Détails</th>
                             </tr>
                         </thead>
                     
@@ -48,11 +48,10 @@
                             <td>{{postulant.libelle}}</td>
                             <td>{{postulant.tirages.length}}</td>
                             <td>
-                            <button [routerLink]="['/tirages',postulant.idListePostulant]">Voir Plus</button>
+                            <button [routerLink]="['/tirages',postulant.idListePostulant]" class="btnVoirPlus">Voir Plus</button>
                             </td>
     
                         </tr>
-
 
                     </table>
                 </div>
