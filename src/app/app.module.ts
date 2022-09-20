@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AccueilComponent } from './accueil/accueil.component';
 import { FormComponent } from './form/form.component';
 import { ShortlistComponent } from './shortlist/shortlist.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ShortlistComponent } from './shortlist/shortlist.component';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

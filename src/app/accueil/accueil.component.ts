@@ -11,6 +11,7 @@ import { ServicetirService } from '../servicetir.service';
 })
 export class AccueilComponent implements OnInit {
 
+  a!:any
   name:any
   obs!:any
   url = "/test"
