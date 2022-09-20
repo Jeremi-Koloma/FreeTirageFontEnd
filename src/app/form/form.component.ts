@@ -17,6 +17,7 @@ export class FormComponent implements OnInit {
   date!:Date
   lib!:String
   g!:tirage
+  a!:any
   NombrePost:any;
   obs!:Observable<tirage[]>;
  constructor( public serv:ServicetirService,public routeur:ActivatedRoute,private route:Router, private service : TirageserviceService ) { }

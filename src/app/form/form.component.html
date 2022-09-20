@@ -17,12 +17,12 @@
                 <th>Détails</th>
             </tr>
             </thead>
-            <tbody  *ngFor="let tirage of obs |async ;  let i =index">
-                <tr>
+            <tbody>
+                <tr *ngFor="let tirage of obs |async; let i =index;">
                     <td>{{tirage.idTirage}}</td>
                     <td>{{tirage.date}}</td>
                     <td>{{tirage.libelle}}</td>
-                    <td>{{NombrePost[i]}} Postulants</td>
+                    <td>{{NombrePost[i]}} Personnes</td>
                     <td>
                     <button class="btnVoirPlus" [routerLink]="['/shortlist', tirage.idTirage]"> Voir Plus</button>
                     </td>

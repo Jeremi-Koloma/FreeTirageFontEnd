@@ -5,17 +5,20 @@ import { DetailsTirageComponent } from './details-tirage/details-tirage.componen
 import {DoTirageComponent } from './do-tirage/do-tirage.component';
 import { FormComponent } from './form/form.component';
 import { ImportFileComponent } from './import-file/import-file.component';
+import { MenuComponent } from './menu/menu.component';
 import { ShortlistComponent } from './shortlist/shortlist.component';
 import { TirageComponent } from './tirage/tirage.component';
 
 
 const routes: Routes = [
   {path:'', component:AccueilComponent},
-  {path:'tirage',component:TirageComponent},
   {path:'do-tirage', component:DoTirageComponent},
   {path:'detail-tirage', component:DetailsTirageComponent},
   {path:'tirages/:id', component:FormComponent},
-  {path:'shortlist/:id', component:ShortlistComponent}
+  {path:'shortlist/:id', component:ShortlistComponent},
+  {path:'page-accueil', component:AccueilComponent},
+  {path:'page-tirage', component:TirageComponent},
+  {path:'page-details',component:DetailsTirageComponent}
 
 ];
 
